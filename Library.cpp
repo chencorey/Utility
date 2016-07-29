@@ -6,7 +6,6 @@
 //returns 2 if infinite intersection point
 int intersect(double x0, double y0, double x1, double y1, double x2, double y2, double x3, double y3, double& ix, double& iy)
 {
-	
 	double s0x = x1-x0;
 	double s0y = y1-y0;
 	double s1x = x3-x2;
