@@ -3,7 +3,7 @@
 //segment 2 from (x2, y2) to (x3, y3)
 //returns 0 if 0 intersection point
 //returns 1 if 1 intersection point, and returns intersection point (ix, iy)
-//returns 2 if infinite intersection points
+//returns 2 if collinear
 int intersect(double x0, double y0, double x1, double y1, double x2, double y2, double x3, double y3, double& ix, double& iy)
 {
 	double s0x = x1-x0;
@@ -13,7 +13,6 @@ int intersect(double x0, double y0, double x1, double y1, double x2, double y2, 
 	double det = s0x*s1y-s1x*s0y;
 	if(det==0)
 	{
-		//collinear
 		return 2;
 	}
 	double c0 = (s0x*(y0-y2)-s0y*(x0-x2))/det;
