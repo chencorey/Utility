@@ -3,7 +3,7 @@
 //segment 2 from (x2, y2) to (x3, y3)
 //returns 0 if 0 intersection point
 //returns 1 if 1 intersection point, and returns intersection point (ix, iy)
-//returns 2 if infinite intersection point
+//returns 2 if infinite intersection points
 int intersect(double x0, double y0, double x1, double y1, double x2, double y2, double x3, double y3, double& ix, double& iy)
 {
 	double s0x = x1-x0;
