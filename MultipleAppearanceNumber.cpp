@@ -18,7 +18,7 @@ int MultipleAppearanceNumber(vector<int> arr)
 			}
 		}
 		// the heuristic used to determine which side to traverse: always go to the side of mid where there are more elements
-		// than expected (=n-1-mid). If n is 9 and mid is 6, we expect 3 elements here (i.e. 6, 7, 8). 
+		// than expected (=n-1-mid). If n is 9 and mid is 5, we expect 3 elements here (i.e. 6, 7, 8). 
 		// This will provably always be the side the duplicated element is on. Proof below
 		// Let's start by assuming our heuristic is false, and creating a contradiction.
 		// There must exist a set of counterexamples if our heuristic is false. Consider one such counterexample
