@@ -32,8 +32,9 @@ int MultipleAppearanceNumber(vector<int> arr)
 		// Case 2: What if M>2?
 		// Then there will always be at least M-2 elements who do not appear. We can transform our counterexample when M>2 to M = 2
 		// by removing a duplicate, and adding one of the M-2 numbers that didn't appear. Note that doing so will not change the
-		// result of our heuristic. Call Q the element that we added. If Q<mid, then R is still >L, and if Q> mid, R is also still
-		// <L. This means that when M>2, there exists an equivalent solution where M=2. 
+		// result of our heuristic. Call Q the element that we added. If Q<mid, then R is still >L (R and L don't change), and 
+		// if Q> mid, R is also still >L (R increased, L decreased). 
+		// This means that when M>2, there exists an equivalent solution where M=2. 
 		// CONTRADICTION! We proved M!=2, so therefore no solution exists for M>2. 
 		// Therefore our heuristic is provably correct.
 		// QED
