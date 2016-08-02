@@ -26,15 +26,15 @@ int MultipleAppearanceNumber(vector<int> arr)
 		// Assume WLOG that the element that appears more than once is less than mid. Call this number k. 
 		// Then, we are looking only at the instances where R>L (we want to create a counterexample to our heuristic). 
 		// Call M the number of times k appears. 
-		// Case 1: What if k=2?
+		// Case 1: What if M=2?
 		// Then all other numbers must appear exactly once (because there are n+1 integers, going from 0 to n-1)
-		// Then our heuristic will hold true. Therefore, k!=2. 
-		// Case 2: What if k>2?
-		// Then there will always be at least k-2 elements who do not appear. We can transform our counterexample when k>2 to k = 2
-		// by removing a duplicate, and adding one of the k-2 numbers that didn't appear. Note that doing so will not change the
+		// Then our heuristic will hold true. Therefore, M!=2. 
+		// Case 2: What if M>2?
+		// Then there will always be at least M-2 elements who do not appear. We can transform our counterexample when M>2 to M = 2
+		// by removing a duplicate, and adding one of the M-2 numbers that didn't appear. Note that doing so will not change the
 		// result of our heuristic. Call Q the element that we added. If Q<mid, then R is still >L, and if Q> mid, R is also still
-		// <L. This means that when k>2, there exists an equivalent solution where k=2. 
-		// CONTRADICTION! We proved k!=2, so therefore no solution exists for k>2. 
+		// <L. This means that when M>2, there exists an equivalent solution where M=2. 
+		// CONTRADICTION! We proved M!=2, so therefore no solution exists for M>2. 
 		// Therefore our heuristic is provably correct.
 		// QED
 		if(count>arr.size()-2-mid) left = mid+1;
