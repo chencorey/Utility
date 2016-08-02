@@ -1,5 +1,5 @@
 // Question: Given n+1 integers that are between 0 and n-1 inclusive, find the number that appears more than once. 
-// Guaranteed that only 1 number appears twice in input.
+// Guaranteed that only 1 number appears more than once in input.
 // No changing array, do in constant space.
 int MultipleAppearanceNumber(vector<int> arr)
 {
