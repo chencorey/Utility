@@ -8,7 +8,7 @@ int MultipleAppearanceNumber(vector<int> arr)
 	//init binary search 0 to n-1, we are searching for the number here
 	while(left<right)
 	{
-		int mid = (left+right)/2;
+		int mid = left+(right-left)/2;
 		int count = 0;
 		for(int i = 0; i<arr.size(); i++)
 		{
